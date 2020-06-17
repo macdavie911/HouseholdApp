@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarinFormsExamenOpdrachtJune12.Views.TodoP"
+             Title="{Binding Todo.Title}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Delete Todo" Clicked="Delete_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Text:" FontSize="Medium"/>
+            <Label Text="{Binding Todo.Title}" FontSize="Small" />
+            <Label Text="Description:" FontSize="Medium"/>
+            <Label Text="{Binding Todo.Description}" FontSize="Small" />
+            <Button Text="Done" Clicked="Done_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

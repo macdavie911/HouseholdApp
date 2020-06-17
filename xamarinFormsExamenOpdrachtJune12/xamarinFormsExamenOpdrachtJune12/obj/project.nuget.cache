@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "gy5RArzX7MaWUFw0J+vN1p5rOIaeC6k9GfFMQerprfvec78l1/AfB6tvRlgUj3BkntwfA7ALPXJusRlJdGZjBw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dave\\source\\repos\\xamarinFormsExamenOpdrachtJune12\\xamarinFormsExamenOpdrachtJune12\\xamarinFormsExamenOpdrachtJune12\\xamarinFormsExamenOpdrachtJune12.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dave\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\dave\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\dave\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+  ],
+  "logs": []
+}

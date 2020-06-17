@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarinFormsExamenOpdrachtJune12.Views.TodoListP"
+             xmlns:converters="clr-namespace:xamarinFormsExamenOpdrachtJune12.ViewModels.Converters"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DoneToStyleConverter x:Key="converter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+ 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete TodoList" Clicked="DeleteTodoList_Clicked" />
+        <ToolbarItem Text="Add Todo" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+
+    <CollectionView x:Name="TodosTest" ItemsSource="{Binding Todos}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="10">
+                    <Label x:Name="TodoTitle" Text="{Binding Title}"
+                           Padding="10"
+                           LineBreakMode="NoWrap" 
+                           Style="{DynamicResource ListItemTextStyle}"
+                           BackgroundColor="{Binding Done, Converter={StaticResource converter}}"
+                           TextColor="White"
+                           FontSize="16" />
+                    <Label Text="{Binding Description}" 
+                           d:Text="Item descripton"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemDetailTextStyle}"
+                           FontSize="13" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnTodoSelected"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
