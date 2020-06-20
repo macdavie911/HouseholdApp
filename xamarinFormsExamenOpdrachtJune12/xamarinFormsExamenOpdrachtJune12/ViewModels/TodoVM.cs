@@ -10,21 +10,13 @@ namespace xamarinFormsExamenOpdrachtJune12.ViewModels
         public Todo Todo { get; set; }
         public TodoListVM TodoListVM { get; set; }
 
-        /*
-        private bool todoDone;
-
-        public bool TodoDone
-        {
-            get { return todoDone; }
-            set { todoDone = value; }
-        }
-        */
-
 
         public TodoVM(Todo todo, TodoListVM todoListVM)
         {
-            Title = todo?.Title;
+            ViewTitle = todo.Title;
+
             Todo = todo;
+            
             TodoListVM = todoListVM;
         }
     }

@@ -99,18 +99,20 @@ namespace xamarinFormsExamenOpdrachtJune12.Services
             return await Task.FromResult(true);
         }
 
+        
         public async Task<bool> ToggleTodoDoneAsync(string todoListId, string todoId)
         {
-            var todoList = todoLists.Where((TodoList arg) => arg.Id == todoListId).FirstOrDefault();
+            
+            //var todoList = todoLists.Where((TodoList arg) => arg.Id == todoListId).FirstOrDefault();
 
-            var todo = todoList.Todos.Where((Todo arg) => arg.Id == todoId).FirstOrDefault();
+            //var todo = todoList.Todos.Where((Todo arg) => arg.Id == todoId).FirstOrDefault();
 
-            // todo.Done = !todo.Done; ObservableList and Store reference the same objects in memory.
+            // todo.Done = !todo.Done; ObservableList in TodoListVM and Store reference the same objects in memory.
             // switching it again brings it back to default false
-            todo.Done = true;
             
             return await Task.FromResult(true);
         }
+        
 
 
         // Todos

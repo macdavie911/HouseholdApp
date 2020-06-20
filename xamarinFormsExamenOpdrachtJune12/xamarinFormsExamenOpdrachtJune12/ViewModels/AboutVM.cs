@@ -12,7 +12,7 @@ namespace xamarinFormsExamenOpdrachtJune12.ViewModels
 
         public AboutVM()
         {
-            Title = "About";
+            ViewTitle = "About";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://xamarin.com"));
         }
 

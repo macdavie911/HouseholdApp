@@ -6,14 +6,14 @@
              mc:Ignorable="d"
              x:Class="xamarinFormsExamenOpdrachtJune12.Views.TodoListP"
              xmlns:converters="clr-namespace:xamarinFormsExamenOpdrachtJune12.ViewModels.Converters"
-             Title="{Binding Title}">
+             Title="{Binding ViewTitle}">
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:DoneToStyleConverter x:Key="converter" />
         </ResourceDictionary>
     </ContentPage.Resources>
- 
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Delete TodoList" Clicked="DeleteTodoList_Clicked" />
         <ToolbarItem Text="Add Todo" Clicked="AddItem_Clicked" />
@@ -23,19 +23,31 @@
     <CollectionView x:Name="TodosTest" ItemsSource="{Binding Todos}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout Padding="10">
-                    <Label x:Name="TodoTitle" Text="{Binding Title}"
-                           Padding="10"
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Padding="5" HorizontalOptions="StartAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Quantity, StringFormat='{0}x '}"
+                                   Style="{DynamicResource ListItemTextStyle}"
+                                   FontSize="16"
+                                    TextColor="Gray"/>
+                            <Label HorizontalOptions="StartAndExpand"
+                               x:Name="TodoTitle"
+                           Text="{Binding Title, Mode=TwoWay}"
                            LineBreakMode="NoWrap" 
                            Style="{DynamicResource ListItemTextStyle}"
-                           BackgroundColor="{Binding Done, Converter={StaticResource converter}}"
-                           TextColor="White"
                            FontSize="16" />
-                    <Label Text="{Binding Description}" 
-                           d:Text="Item descripton"
+                        </StackLayout>
+                        <Label Text="{Binding Description}" 
                            LineBreakMode="NoWrap"
                            Style="{DynamicResource ListItemDetailTextStyle}"
                            FontSize="13" />
+                    </StackLayout>
+                    <BoxView Margin="5"
+                            BackgroundColor="{Binding Done, Converter={StaticResource converter}}"
+                           HeightRequest="50"
+                           WidthRequest="50"
+                           >
+                    </BoxView>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnTodoSelected"></TapGestureRecognizer>
                     </StackLayout.GestureRecognizers>

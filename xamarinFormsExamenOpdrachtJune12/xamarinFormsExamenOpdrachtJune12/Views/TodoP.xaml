@@ -14,12 +14,20 @@
 
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text:" FontSize="Medium"/>
+            <Label Text="{Binding Todo.Title, Mode=TwoWay}" FontSize="Small" />
+            <Label Text="Title:" FontSize="Medium"/>
             <Label Text="{Binding Todo.Title}" FontSize="Small" />
             <Label Text="Description:" FontSize="Medium"/>
             <Label Text="{Binding Todo.Description}" FontSize="Small" />
-            <Button Text="Done" Clicked="Done_Clicked"/>
+            <Label Text="Done:" FontSize="Medium"/>
+            <Switch IsToggled="{Binding Todo.Done}" Toggled="OnDoneToggled" />
+            <Label Text="{Binding Todo.Quantity,
+                    StringFormat='Quantity: {0}'}"
+                   FontSize="Medium"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="+" Clicked="OnIncreaseQuantity" />
+                <Button x:Name="BtnDecreaseQuantity" Text="-" Clicked="OnDecreaseQuantity" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>

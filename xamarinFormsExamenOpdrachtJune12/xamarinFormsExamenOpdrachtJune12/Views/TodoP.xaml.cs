@@ -54,20 +54,29 @@ namespace xamarinFormsExamenOpdrachtJune12.Views
         {
             MessagingCenter.Send(this, "DeleteTodo", TodoVM.Todo.Id);
 
-            await Navigation.PopModalAsync();
+            await Navigation.PopAsync();
         }
 
         async void Cancel_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            await Navigation.PopAsync();
         }
 
-        async void Done_Clicked(object sender, EventArgs e)
+        async void OnDoneToggled(object sender, ToggledEventArgs e)
         {
-           
-            MessagingCenter.Send(this, "ToggleTodoDone", TodoVM.Todo.Id);
+           // MessagingCenter.Send(this, "ToggleTodoDone", TodoVM.Todo.Id);
 
-            await Navigation.PopModalAsync();
+            await Navigation.PopAsync();
+        }
+
+        private void OnIncreaseQuantity(object sender, EventArgs e)
+        {
+            TodoVM.Todo.Quantity++;
+        }
+
+        private void OnDecreaseQuantity(object sender, EventArgs e)
+        {
+            TodoVM.Todo.Quantity--;
         }
     }
 }

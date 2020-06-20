@@ -57,7 +57,7 @@ namespace xamarinFormsExamenOpdrachtJune12.Views
             var layout = (BindableObject)sender;
             var todo = (Todo)layout.BindingContext;
 
-            await Navigation.PushModalAsync(new NavigationPage(new TodoP(new TodoVM(todo, TodoListVM))));
+            await Navigation.PushAsync(new TodoP(new TodoVM(todo, TodoListVM)));
            // await Navigation.PushAsync(new TodoP(new TodoVM(todo, TodoListVM)));
         }
     }

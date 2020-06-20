@@ -19,7 +19,7 @@ namespace xamarinFormsExamenOpdrachtJune12.ViewModels
        
         public TodoListVM(TodoList todoList = null)
         {
-            Title = todoList?.Title;
+            ViewTitle = todoList?.Title;
             Id = todoList.Id;
             
             Todos = new ObservableCollection<Todo>();
@@ -52,7 +52,7 @@ namespace xamarinFormsExamenOpdrachtJune12.ViewModels
                 await DataStore.DeleteTodoAsync(Id, todo);
             });
 
-            
+            /*
             MessagingCenter.Subscribe<TodoP, string>(this, "ToggleTodoDone", async (obj, todoId) =>
             {
                 var todo = Todos.Where((Todo arg) => arg.Id == todoId).FirstOrDefault();
@@ -67,6 +67,7 @@ namespace xamarinFormsExamenOpdrachtJune12.ViewModels
    
                 await DataStore.ToggleTodoDoneAsync(Id, todoId);           
             });
+            */
             
         }
 
@@ -76,7 +77,7 @@ namespace xamarinFormsExamenOpdrachtJune12.ViewModels
 
             MessagingCenter.Unsubscribe<TodoP, string>(this, "DeleteTodo");
 
-            MessagingCenter.Unsubscribe<TodoP, string>(this, "ToggleTodoDone");
+           // MessagingCenter.Unsubscribe<TodoP, string>(this, "ToggleTodoDone");
         }
     }
 }

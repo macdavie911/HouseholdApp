@@ -18,7 +18,7 @@ namespace xamarinFormsExamenOpdrachtJune12.ViewModels
 
         public TodoListsVM()
         {
-            Title = "Todolists";
+            ViewTitle = "Todolists";
             TodoLists = new ObservableCollection<TodoList>();
             LoadTodoListsCommand = new Command(async () => await ExecuteLoadTodoListsCommand());
 

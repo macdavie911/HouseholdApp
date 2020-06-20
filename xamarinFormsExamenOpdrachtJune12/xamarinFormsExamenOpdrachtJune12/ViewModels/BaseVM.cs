@@ -33,11 +33,11 @@ namespace xamarinFormsExamenOpdrachtJune12.ViewModels
 
 
 
-        string title = string.Empty;
-        public string Title
+        string viewTitle = string.Empty;
+        public string ViewTitle
         {
-            get { return title; }
-            set { SetProperty(ref title, value); }
+            get { return viewTitle; }
+            set { SetProperty(ref viewTitle, value); }
         }
 
 
