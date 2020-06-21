@@ -1,19 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using xamarinFormsExamenOpdrachtJune12.Models;
+using xamarinFormsExamenOpdrachtJune12.Static;
 
 namespace xamarinFormsExamenOpdrachtJune12.Services
 {
     public class Store : IStore<TodoList, Todo>
     {
-        readonly List<TodoList> todoLists;
+        private List<TodoList> todoLists;
+
+        public List<TodoList> TodoLists
+        {
+            get { return todoLists; }
+            set { todoLists = value; }
+        }
+
 
         public Store()
         {
-            todoLists = new List<TodoList>()
+            // Replaced by API Call - See method below
+            /*
+            TodoLists = new List<TodoList>()
             {
                 new TodoList {
                     Id = Guid.NewGuid().ToString(),
@@ -46,10 +58,19 @@ namespace xamarinFormsExamenOpdrachtJune12.Services
                     }
                 }
             };
+            */
         }
 
 
        
+        // TodoLists
+        public async Task<IEnumerable<TodoList>> GetTodoListsAsync(bool forceRefresh = false)
+        {
+            TodoLists = await API.GetTodoListsAsync();
+
+            return await Task.FromResult(TodoLists);
+        }
+
         // TodoList
         public async Task<bool> AddTodoListAsync(TodoList todoList)
         {
@@ -72,13 +93,6 @@ namespace xamarinFormsExamenOpdrachtJune12.Services
         {
             throw new NotImplementedException();
         }
-
-        // TodoLists
-        public async Task<IEnumerable<TodoList>> GetTodoListsAsync(bool forceRefresh = false)
-        {
-            return await Task.FromResult(todoLists);
-        }
-
 
         // Todo
         public async Task<bool> AddTodoAsync(string todoListId, Todo todo)

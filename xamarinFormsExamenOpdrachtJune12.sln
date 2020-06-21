@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarinFormsExamenOpdrachtJ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarinFormsExamenOpdrachtJune12.Android", "xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12.Android\xamarinFormsExamenOpdrachtJune12.Android.csproj", "{406A02C2-9DC5-48C8-AD59-C679370838B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarinFormsExamenOpdrachtJune12", "xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12.csproj", "{91CA0629-ADB0-43E3-BC73-22386C8B874B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xamarinFormsExamenOpdrachtJune12", "xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12.csproj", "{91CA0629-ADB0-43E3-BC73-22386C8B874B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "TodoApi\TodoApi.csproj", "{C571A228-C5EE-48AB-951D-2DE4187266DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,22 @@ Global
 		{91CA0629-ADB0-43E3-BC73-22386C8B874B}.Release|x86.ActiveCfg = Release|Any CPU
 		{91CA0629-ADB0-43E3-BC73-22386C8B874B}.Release|x86.Build.0 = Release|Any CPU
 		{91CA0629-ADB0-43E3-BC73-22386C8B874B}.Release|x86.Deploy.0 = Release|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Debug|ARM.Build.0 = Debug|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Debug|x64.Build.0 = Debug|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Debug|x86.Build.0 = Debug|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Release|ARM.Build.0 = Release|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Release|x64.ActiveCfg = Release|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Release|x64.Build.0 = Release|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Release|x86.ActiveCfg = Release|Any CPU
+		{C571A228-C5EE-48AB-951D-2DE4187266DA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

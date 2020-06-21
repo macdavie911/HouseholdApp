@@ -313,3 +313,4 @@ C:\Users\dave\source\repos\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOp
 C:\Users\dave\source\repos\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\dave\source\repos\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160643180000000.json
 C:\Users\dave\source\repos\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\dave\source\repos\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12\xamarinFormsExamenOpdrachtJune12.UWP\bin\x86\Debug\Newtonsoft.Json.dll
